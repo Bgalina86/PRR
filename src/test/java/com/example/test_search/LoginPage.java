@@ -19,6 +19,14 @@ public class LoginPage {
     private WebElement searchfille;
     @FindBy(xpath = "//button[@class='button_secondary home__search-button button']")
     private WebElement searchfillebutton;
+// хлебные крошки
+    @FindBy(xpath = "//span[@class='breadcrumbs__item-link breadcrumbs__item-link_active']")
+    private WebElement search_bread_crumbs;
+
+    //проверка поиковой выдачи на запрос
+    @FindBy(xpath = "input[@class='search-content__input-control input__control']")
+    private WebElement searchprimari;
+
     /**
      * метод для ввода данных в поисковую выдачу
      */
@@ -31,4 +39,19 @@ public class LoginPage {
      */
     public void clickLoginBtn() {
         searchfillebutton.click(); }
+
+    /**
+     * метод для проверки наличия хлебных крошек, после перехода на старницу поисковой выдачи
+     */
+     public void breadCrumbs (String bread_crumbs){
+         if (bread_crumbs == search_bread_crumbs.getText()) {
+             }
+          }
+
+    /**
+     * метод для проверки поискового запроса
+     */
+    public void searchPrimari (String searchtext){
+        searchprimari.getText();
+    }
 }

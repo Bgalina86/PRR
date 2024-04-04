@@ -53,6 +53,15 @@ public class LoginTest {
         loginPage.inputsearchvacancy(ConfProperties.getProperty("searchtext"));
         //нажимаем кнопку поиска
         loginPage.clickLoginBtn();
+           }
+
+    @Test
+    public void loginTestSearchCrumbs() {
+        loginPage.breadCrumbs(ConfProperties.getProperty("bread_crumbs"));
+    }
+    @Test
+    public void loginTestSearch() {
+        loginPage.searchPrimari(ConfProperties.getProperty("searchtext"));
 
     }
 
